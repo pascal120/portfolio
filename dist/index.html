@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Olami || Lekan Portfolio</title>
 
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <style type="text/css">
         button {
             display: block;
@@ -127,15 +127,25 @@ function showNotification() {
     </main>
     <script src="https://kit.fontawesome.com/3671247c26.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript" id="cookieinfo"
-	src="js/cookieinfo.min.js"
-	data-bg="#645862"
-	data-fg="#FFFFFF"
-	data-link="#F1D600"
-	data-cookie="CookieInfoScript"
-	data-text-align="left"
-       data-close-text="Got it!">
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#eb6c44",
+          "text": "#ffffff"
+        },
+        "button": {
+          "background": "#f5d948"
+        }
+      },
+      "type": "opt-out",
+      "content": {
+        "href": "https://pascal120.github.io/portfolio/dist/index.html/private-policy"
+      }
+    });
+    </script>
 
 
 </body>
