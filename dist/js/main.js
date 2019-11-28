@@ -30,3 +30,31 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+var notificationsEnabled = false;
+    function initNotifications() {
+        if (window.Notification) {
+            Notification.requestPermission(function(permission) {
+                if (permission === 'granted') {
+                    notificationsEnabled = true;
+                } else {
+                    alert("You have denied Notifications :(");
+                }
+            });
+        } else {
+            alert("Your browser does not support Notifications API");
+        }
+    }
+
+    function showNotification() {
+        if (notificationsEnabled) {
+            var notification = new Notification('SSaurel', {
+                body : 'You clicked on the button !',
+                icon : 'https://www.ssaurel.com/cryptocoins/screenshots/web_hi_res_512.png'
+            });
+
+            setTimeout (function() { notification.close(); }, 5000);
+        } else {
+            alert ('Notifications are disabled');
+        }
+    }
