@@ -7,6 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
     <title>Olami || Lekan Portfolio</title>
+
+    
+    <style type="text/css">
+        button {
+            display: block;
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 16px 20px;
+            border: none;
+            background: #283542;
+            color: #fff;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            align-items: baseline;
+            text-align: end;
+        }
+
+        button:hover {
+            background: red;
+            cursor : pointer;
+        }
+
+    </style>
+ <script>
+var notificationsEnabled = false;
+function initNotifications() {
+    if (window.Notification) {
+        Notification.requestPermission(function(permission) {
+            if (permission === 'granted') {
+                notificationsEnabled = true;
+            } else {
+                alert("You have denied Notifications :(");
+            }
+        });
+    } else {
+        alert("Your browser does not support Notifications API");
+    }
+}
+
+function showNotification() {
+    if (notificationsEnabled) {
+        var notification = new Notification('SSaurel', {
+            body : 'You clicked on the button !',
+            icon : 'https://www.ssaurel.com/cryptocoins/screenshots/web_hi_res_512.png'
+        });
+
+        setTimeout (function() { notification.close(); }, 5000);
+    } else {
+        alert ('Notifications are disabled');
+    }
+}
+</script>
 </head>
 
 <body>
